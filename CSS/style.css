@@ -1,0 +1,531 @@
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@400;500&family=Roboto:ital@1&display=swap');
+
+body {
+    /*font: 24px Helvetica;
+   background: #999999;*/
+    height: auto;
+    font-family: 'Montserrat', "Helvetica Neue", Arial, sans-serif !important;
+    justify-content: center;
+    align-items: center;
+}
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+/*Etiquetas basicas*/
+h1 {
+    color: #606060;
+    font-weight: bolder;
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #E691BC;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+h3 {
+    color: #E691BC;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+h4 {
+    color: #E691BC;
+    font-weight: normal;
+    font-size: 28px;
+}
+
+h5 {
+    color: #E691BC;
+    font-weight: normal;
+    font-size: 24px;
+}
+
+h6 {
+    color: #E691BC;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+span {
+    color: #101010;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+p {
+    color: #747377;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+/*Title and Subtitle*/
+.title {
+    font-weight: 500;
+    position: relative;
+}
+
+.title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    border-radius: 5px;
+    background: #606060;
+}
+
+/*contenedor*/
+.container {
+    max-width: 90%;
+    background-color: #fff;
+    margin: 5%;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px #E381B3;
+}
+
+/*Barra de navegacion*/
+.nav {
+    background-color: #f0f0f0;
+    height: 80px;
+    width: 100vw;
+    box-shadow: 5px 0 10px #E381B3;
+}
+
+.nav_container {
+    display: flex;
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    margin-top: 70px;
+}
+
+.btn_menu,
+.nav_input {
+    display: none;
+}
+
+.nav_menu {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 3em;
+}
+
+.nav_item {
+    padding: 7px 13px;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    text-transform: uppercase;
+    color: #101010;
+    --clippy: polygon(0 0, 0 0, 0 100%, 0 100%);
+}
+
+.nav_item::after {
+    content: '';
+    display: block;
+    background: #E381B3;
+    width: auto;
+    margin-top: 3px;
+    height: 3px;
+    clip-path: var(--clippy);
+    transition: clip-path .5s;
+}
+
+.nav_item:hover {
+    color: #E381B3;
+    transition: .5s;
+    --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/*Login*/
+.login-box {
+    width: 350px;
+    height: 400px;
+    background: #fff;
+    box-sizing: border-box;
+    padding: 20px 30px;
+    border-radius: 25px;
+    box-shadow: 0 5px 10px #E381B3;
+    margin-top: 350px;
+    margin-left: 900px;
+}
+
+.avatar {
+    width: 40%;
+    border-radius: 100px;
+    box-shadow: 0 5px 10px #E381B3;
+    margin-top: -60px;
+    margin-left: 90px;
+    left: calc(50% - 50px);
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+    border: none;
+    border-bottom: 1px solid #E381B3;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    width: 90%;
+    color: #606060;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.login-box input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 100%;
+    background: #E381B3;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.login-box input[type="submit"]:hover {
+    cursor: pointer;
+    background: #E691BC;
+    color: #f0f0f0;
+}
+
+.login-box a {
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: #101010;
+}
+
+.login-box a:hover {
+    color: #E381B3;
+}
+
+/*Registro*/
+
+.container .logo-registro {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    top: 10%;
+    left: 90%;
+    /*left: calc(50% - 50px);*/
+}
+
+.content form .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+form .user-details .input-box {
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+
+form .input-box span.details {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.user-details .input-box input, textarea, select {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid,
+.user-details .input-box textarea:focus,
+.user-details .input-box textarea:valid,
+.user-details .input-box select:focus,
+.user-details .input-box select:valid  {
+    border-color: #E381B3;
+}
+
+.button input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 50px;
+    width: 100px;
+    background: #E381B3;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.button input[type="submit"]:hover {
+    cursor: pointer;
+    background: #E691BC;
+    color: #f0f0f0;
+}
+
+.categoria {
+    margin-bottom: 25px;
+}
+
+.detail-check{
+    display: flex;
+}
+.detail-check input[type="checkbox"]{
+    width: 30px;
+    margin: 20px;
+    margin-top: -15px;
+}
+
+.detail-check .details{
+    width: 150px;
+}
+
+.btn-comprar a{
+    display: block;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    height: 50px;
+    width: 120px;
+    background: #E381B3;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+.btn-comprar a:hover{
+    background: #E691BC;
+}
+
+/*Productos Card*/
+
+.card-group {
+    display: flex;
+}
+
+.card {
+    width: 100%;
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0px 1px 1px #E691BC;
+    cursor: default;
+    transition: all 400ms ease;
+   
+    padding: 10px;
+}
+
+.card:hover {
+    box-shadow: 5px 5px 20px #E691BC;
+}
+
+.card img {
+    width: 100%;
+
+}
+
+table, tr, th, td{
+    border: 1px solid #606060;
+    border-collapse: collapse;
+}
+
+th{
+    width: 550px;
+    height: 50px;
+}
+td{
+    height: 50px;
+    text-align: center;
+}
+@media(max-width: 700px) {
+
+    /*Menu*/
+    .btn_menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav_menu {
+        position: fixed;
+        top: 80px;
+        bottom: 0;
+        background: #E691BC;
+        width: 100%;
+        left: 0;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        clip-path: circle(0 at center);
+        transition: clip-path 1s ease-in-out;
+    }
+
+    .nav_item {
+        color: #fff;
+    }
+
+    .nav_input:checked+.nav_menu {
+        clip-path: circle(100% at center);
+    }
+
+    .logo {
+        width: 75px;
+        height: 75px;
+        margin: 0;
+        padding: 0;
+    }
+
+    /*Login*/
+    .login-box {
+        width: 350px;
+        height: 400px;
+        background: #fff;
+        box-sizing: border-box;
+        padding: 20px 30px;
+        border-radius: 25px;
+        box-shadow: 0 5px 10px #E381B3;
+        margin-top: 25%;
+        margin-left: 8%;
+    }
+
+    .avatar {
+        width: 40%;
+        border-radius: 100px;
+        box-shadow: 0 5px 10px #E381B3;
+        margin-top: -80px;
+        margin-left: 80px;
+        left: calc(50% - 50px);
+    }
+
+    .login-box input[type="text"],
+    .login-box input[type="password"] {
+        border: none;
+        border-bottom: 1px solid #E381B3;
+        background: transparent;
+        outline: none;
+        height: 40px;
+        width: 90%;
+        color: #606060;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .login-box input[type="submit"] {
+        border: none;
+        outline: none;
+        height: 40px;
+        width: 100%;
+        background: #E381B3;
+        color: #fff;
+        font-size: 18px;
+        border-radius: 10px;
+    }
+
+    .login-box input[type="submit"]:hover {
+        cursor: pointer;
+        background: #E691BC;
+        color: #f0f0f0;
+    }
+
+    .login-box a {
+        text-decoration: none;
+        font-size: 12px;
+        line-height: 20px;
+        color: #101010;
+    }
+
+    .login-box a:hover {
+        color: #E381B3;
+    }
+
+    /*Conentendor*/
+    .container {
+        max-width: 90%;
+        margin: 10% 5%;
+        background-color: #fff;
+        padding: 15px 15px;
+        border-radius: 5px;
+        box-shadow: 0 5px 10px #E381B3;
+    }
+
+    /*Registro*/
+
+    form .user-details .input-box {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    form .category {
+        width: 100%;
+    }
+
+    .content form .user-details {
+        max-height: 100%;
+        overflow-y: scroll;
+    }
+
+    /*
+    .suser-details::-webkit-scrollbar {
+        width: 5px;
+    }
+    */
+
+    /*Producrtos*/
+    .categoria {
+        margin-bottom: 20px;
+    }
+
+    .card-group {
+        display: grid;
+    }
+
+    .card {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 20px;
+        border-radius: 6px;
+        overflow: hidden;
+        background: #fff;
+        box-shadow: 0px 1px 10px #E691BC;
+        cursor: default;
+        transition: all 400ms ease;
+    }
+
+    .card:hover {
+        box-shadow: 5px 5px 20px #E691BC;
+    }
+
+    .card img {
+        width: 100%;
+    }
+}
